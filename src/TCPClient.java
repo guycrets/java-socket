@@ -2,7 +2,7 @@ import java.io.*;
 import java.net.*;
 import java.util.Scanner;
 
-public class Client {
+public class TCPClient {
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
 
@@ -20,6 +20,9 @@ public class Client {
 
         String userInput;
         while ((userInput = in.readLine()) != null) {
+            if (userInput.equals("x")) {
+                break;
+            }
             out.println(userInput);
         }
 

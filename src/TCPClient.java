@@ -3,16 +3,14 @@ import java.net.*;
 import java.util.Scanner;
 
 public class TCPClient {
+    private static final int PORT = 7654;
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter server IP address: ");
         String serverAddress = scanner.nextLine();
 
-        System.out.print("Enter server port number: ");
-        int portNumber = scanner.nextInt();
-
-        Socket clientSocket = new Socket(serverAddress, portNumber);
+        Socket clientSocket = new Socket(serverAddress, PORT);
         System.out.println("Connected to server");
 
         PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);

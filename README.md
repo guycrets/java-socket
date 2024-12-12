@@ -8,14 +8,14 @@ A couple of sample Java classes that will allow you to open a socket so that you
 ## How to 
 
 - [ ] Choose a set of matching classes (TCP or UDP)
-- [ ] Start the server class and enter a port number larger than 1024 e.g. 8080
-- [ ] Start the client and enter localhost as server name and the port number you specified at server side e.g. 8080
+- [ ] Start the server class, will listen on port 7654
+- [ ] Start the client and enter localhost as server name or address (IPv4 or IPv6)
 
 ## Observe behaviour on OS level
 On Windows
 
 - [ ] Open a command prompt once the programs are running
-- [ ] At the prompt type: netstat -an | findstr 8080
+- [ ] At the prompt type: netstat -an | findstr 7654
 - [ ] This should return the socket status
 
 
@@ -23,7 +23,7 @@ On Windows
 
 - [ ] Open Wireshark and start capture
 - [ ] Once capture is started you can start the programs and observe who the connection is established
-- [ ] Use tcp.port == 8080 or udp.port == 8080 as filter depending on the use case you're testing
+- [ ] Use tcp.port == 7654 or udp.port == 7654 as filter depending on the use case you're testing
 
 ## Extra 
 
